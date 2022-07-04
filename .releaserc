@@ -1,0 +1,28 @@
+{
+  "branches": "main",
+  "debug": "false",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "mvn -B versions:set -DnewVersion=${nextRelease.version}",
+        "publishCmd": "mvn -B source:jar deploy -DskipTests && mkdir release && cp target/!(*-sources|*-javadoc).jar release
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [{ "path": "release/**" }]
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["pom.xml", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+}
