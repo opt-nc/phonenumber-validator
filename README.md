@@ -1,33 +1,64 @@
-# phonenumber-validator-4j
-
-## A propos
+# ❔ phonenumber-validator-4j
 
 SDK Java permettant de valider, qualifier un numéro de téléphone calédonien.
 
 
-## Comment utiliser le sdk
+## ⬇️ Import de la dépendance publique
 
-### Configurer le pom.xml
+Cette dépendance est disponible publiquement via [Jitpack](https://jitpack.io/#opt-nc/phonenumber-validator-4j).
 
-- ajouter la repo Github
+### 🪶 Maven
+
+Ajouter la repo [Jitpack](https://jitpack.io/) :
+
 ```xml
 <repositories>
-    <repository>
-        <id>github</id>
-        <name>GitHub OPT-NC Apache Maven Packages</name>
-        <url>https://maven.pkg.github.com/opt-nc/phonenumber-validator-4j</url>
-    </repository>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
 </repositories>
 ```
 
+Puis la dépendance :
 
-## Exemples de code
+```xml
+<dependency>
+  <groupId>com.github.opt-nc</groupId>
+  <artifactId>phonenumber-validator-4j</artifactId>
+  <version>Tag</version>
+</dependency>
+```
 
-Plusieurs exemples sont disponibles dans la class Main du projet.
+### 🐘 Gradle
 
-La classe utilitaire `PhoneNumberValidator` ne prend en entrée que des chaines de caractères respectant la norme `e164`, i.e de la forme "+687123456".
+Ajouter la repo :
 
-La méthode `format`, permet de convertir le numéro de téléphone dans la norme `e164`.
+```
+allprojects {
+  repositories {
+			...
+  maven { url 'https://jitpack.io' }
+		}
+}
+````
+
+Puis la dépendance :
+
+```
+dependencies {
+  implementation 'com.github.opt-nc:phonenumber-validator-4j:Tag'
+}
+```
+
+
+## ✍️ Exemples de code
+
+Plusieurs exemples sont disponibles dans la classe Main du projet.
+
+La classe utilitaire `PhoneNumberValidator` ne prend en entrée que des chaines de caractères respectant la norme `E.164`, i.e de la forme "+687123456".
+
+La méthode `format`, permet de convertir un numéro de téléphone sur 6 digits dans la norme `E.164`.
 
 
 #### Connaitre le type de numéro de téléphone
@@ -45,7 +76,7 @@ Fixe ? : non
 ```
 
 
-#### Formatter un numéro de téléphone avec la norme e164
+#### Formatter un numéro de téléphone en respectant la norme E.164
 
 ```java
 String mobilePhoneNumber = PhoneNumberValidator.format("514243");
