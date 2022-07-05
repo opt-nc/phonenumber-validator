@@ -1,9 +1,9 @@
-package nc.opt.phonenumber.validator.sdk.validator;
+package nc.opt.telecom.sdk.phonenumber.validator.util;
 
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
-import nc.opt.phonenumber.validator.sdk.enumeration.PhoneNumberType;
+import nc.opt.telecom.sdk.phonenumber.validator.enumeration.PhoneNumberType;
 
 import java.util.Objects;
 
