@@ -1,11 +1,11 @@
-# ❔ phonenumber-validator-4j
+# ❔ phonenumber-validator
 
 SDK Java permettant de valider, qualifier un numéro de téléphone calédonien.
 
 
 ## ⬇️ Import de la dépendance publique
 
-Cette dépendance est disponible publiquement via [Jitpack](https://jitpack.io/#opt-nc/phonenumber-validator-4j).
+Cette dépendance est disponible publiquement via [Jitpack](https://jitpack.io/#opt-nc/phonenumber-validator).
 
 ### 🪶 Maven
 
@@ -25,7 +25,7 @@ Puis la dépendance :
 ```xml
 <dependency>
   <groupId>com.github.opt-nc</groupId>
-  <artifactId>phonenumber-validator-4j</artifactId>
+  <artifactId>phonenumber-validator</artifactId>
   <version>Tag</version>
 </dependency>
 ```
@@ -47,7 +47,7 @@ Puis la dépendance :
 
 ```
 dependencies {
-  implementation 'com.github.opt-nc:phonenumber-validator-4j:Tag'
+  implementation 'com.github.opt-nc:phonenumber-validator:Tag'
 }
 ```
 

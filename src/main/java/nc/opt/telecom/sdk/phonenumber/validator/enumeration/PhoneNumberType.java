@@ -1,4 +1,4 @@
-package nc.opt.phonenumber.validator.sdk.enumeration;
+package nc.opt.telecom.sdk.phonenumber.validator.enumeration;
 
 public enum PhoneNumberType {
     FIXE ("Fixe"),

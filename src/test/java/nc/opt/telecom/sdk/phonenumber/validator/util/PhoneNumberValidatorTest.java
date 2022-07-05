@@ -1,8 +1,7 @@
-package nc.opt.phonenumber.validator.sdk.validator;
+package nc.opt.telecom.sdk.phonenumber.validator.util;
 
 import com.google.i18n.phonenumbers.NumberParseException;
-import nc.opt.phonenumber.validator.sdk.enumeration.PhoneNumberType;
-import nc.opt.phonenumber.validator.sdk.validator.PhoneNumberValidator;
+import nc.opt.telecom.sdk.phonenumber.validator.enumeration.PhoneNumberType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
