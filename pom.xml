@@ -8,6 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>SDK java permettant de valider, qualifier un numéro de téléphone calédonien.</description>
+    <inceptionYear>2022</inceptionYear>
 
     <name>phonenumber-validator-4j</name>
     <url>https://github.com/opt-nc/phonenumber-validator-4j</url>
@@ -131,11 +132,4 @@
         </plugins>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/opt-nc/phonenumber-validator-4j</url>
-        </repository>
-    </distributionManagement>
 </project>
