@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ '8', '17' ]
+        java: [ '8', '11', '17' ]
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK ${{ matrix.Java }}
@@ -23,7 +23,7 @@ jobs:
       - name: Build with Maven
         run:  mvn -B verify
         env:
-          GITHUB_TOKEN: ${{ secrets.OPT_CI_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   conventional-commits-versionning:
     needs: [build]
@@ -47,4 +47,4 @@ jobs:
             @semantic-release/exec
             @semantic-release/git
         env:
-          GITHUB_TOKEN: ${{ secrets.OPT_CI_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
