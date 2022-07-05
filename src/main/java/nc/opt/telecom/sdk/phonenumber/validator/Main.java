@@ -1,7 +1,7 @@
-package nc.opt.phonenumber.validator.sdk;
+package nc.opt.telecom.sdk.phonenumber.validator;
 
 import com.google.i18n.phonenumbers.NumberParseException;
-import nc.opt.phonenumber.validator.sdk.validator.PhoneNumberValidator;
+import nc.opt.telecom.sdk.phonenumber.validator.util.PhoneNumberValidator;
 
 public class Main
 {
