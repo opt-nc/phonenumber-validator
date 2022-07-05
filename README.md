@@ -58,6 +58,12 @@ dependencies {
 ## ✍️ Exemples de code
 
 Plusieurs exemples sont disponibles dans la classe Main du projet.
+Pour lancer l'exemple:
+```shell
+mvn clean package
+java -jar target/phonenumber-validator-1.0.0.jar
+```
+
 
 La classe utilitaire `PhoneNumberValidator` ne prend en entrée que des chaines de caractères respectant la norme `E.164`, i.e de la forme "+687123456".
 
@@ -79,12 +85,12 @@ Fixe ? : non
 ```
 
 
-#### Formatter un numéro de téléphone en respectant la norme E.164
+#### Formater un numéro de téléphone en respectant la norme E.164
 
 ```java
 String mobilePhoneNumber = PhoneNumberValidator.format("514243");
-System.out.println("Numéro de téléphone formatté : " + mobilePhoneNumber);
+System.out.println("Numéro de téléphone formaté : " + mobilePhoneNumber);
 ```
 ```shell
-Numéro de téléphone formatté : +687514243
+Numéro de téléphone formaté : +687514243
 ```
