@@ -3,7 +3,6 @@
   "debug": "false",
   "plugins": [
     "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
     [
       "@semantic-release/exec",
       {
@@ -23,6 +22,11 @@
                   "hidden": false
                 },
                 {
+                  "type": "features",
+                  "section": ":rocket: Features",
+                   "hidden": false
+                   },
+                {
                   "type": "fix",
                   "section": ":bug: Bug Fixes",
                   "hidden": false
@@ -34,17 +38,17 @@
                 },
                 {
                   "type": "style",
-                  "section": ":barber: Stylisation",
+                  "section": ":barber: Styles",
                   "hidden": false
                 },
                 {
                   "type": "refactor",
-                  "section": ":zap: Refactor",
+                  "section": ":zap: Code Refactoring",
                   "hidden": false
                 },
                 {
                   "type": "perf",
-                  "section": ":fast_forward: Performances",
+                  "section": ":fast_forward: Performance Improvements",
                   "hidden": false
                 },
                 {
@@ -54,12 +58,13 @@
                 },
                 {
                   "type": "ci",
-                  "section": ":repeat: CI",
+                  "section": ":repeat: Continuous Integration",
                   "hidden": false
                 },
                 {
                   "type": "chore",
-                  "hidden": true
+                  "section": "Miscellaneous Chores",
+                  "hidden": false
                 }
               ]
             }
