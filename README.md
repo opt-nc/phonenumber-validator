@@ -61,8 +61,7 @@ dependencies {
 Plusieurs exemples sont disponibles dans la classe Main du projet.
 Pour lancer l'exemple:
 ```shell
-mvn clean package
-java -jar target/phonenumber-validator-1.0.0.jar
+mvn exec:java
 ```
 
 
@@ -74,9 +73,9 @@ La méthode `format`, permet de convertir un numéro de téléphone sur 6 digits
 #### Connaitre le type de numéro de téléphone
 
 ```java
-    System.out.println("Type de numéro : " + PhoneNumberValidator.getPhoneType("+687514243").name());
-    System.out.println("Mobile ? : " + (PhoneNumberValidator.isMobile("+687514243") ? "oui" : "non"));
-    System.out.println("Fixe ? : " + (PhoneNumberValidator.isFixe("+687514243") ? "oui" : "non"));
+System.out.println("Type de numéro : " + PhoneNumberValidator.getPhoneType("+687514243").name());
+System.out.println("Mobile ? : " + (PhoneNumberValidator.isMobile("+687514243") ? "oui" : "non"));
+System.out.println("Fixe ? : " + (PhoneNumberValidator.isFixe("+687514243") ? "oui" : "non"));
 ```
 
 ```shell
