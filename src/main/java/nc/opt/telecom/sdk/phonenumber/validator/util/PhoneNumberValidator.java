@@ -68,12 +68,13 @@ public class PhoneNumberValidator {
 
     public static String format(String phoneNumber) throws NumberParseException {
         Phonenumber.PhoneNumber number = new Phonenumber.PhoneNumber();
-        String nationalNumber = phoneNumber.substring(NATIONAL_NUMBER_INDEX);
-        number.setCountryCode(NEW_CAL_COUNTRY_CODE).setNationalNumber(Long.valueOf(nationalNumber));
+        number.setCountryCode(NEW_CAL_COUNTRY_CODE);
         String regionCode = PhoneNumberUtil.getInstance().getRegionCodeForCountryCode(NEW_CAL_COUNTRY_CODE);
 
         PhoneNumberUtil.getInstance().parse(phoneNumber, regionCode, number);
-        return PhoneNumberUtil.getInstance().format(number, PhoneNumberUtil.PhoneNumberFormat.E164);
+        String formatedPhoneNumber = PhoneNumberUtil.getInstance().format(number, PhoneNumberUtil.PhoneNumberFormat.E164);
+        checkPhoneNumber(formatedPhoneNumber);
+        return formatedPhoneNumber;
     }
 
     private static boolean isNumeric(String strNum) {

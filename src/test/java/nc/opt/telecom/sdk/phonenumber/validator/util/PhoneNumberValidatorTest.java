@@ -58,15 +58,15 @@ public class PhoneNumberValidatorTest {
         assertEquals("+687419358", PhoneNumberValidator.format("419358"));
         assertEquals("+687419358", PhoneNumberValidator.format("+687419358"));
         assertEquals("+687419358", PhoneNumberValidator.format("00687419358"));
+        assertEquals("+687419358", PhoneNumberValidator.format("41/93/58"));
+        assertEquals("+687419358", PhoneNumberValidator.format("41.93.58"));
 
     }
 
     @Test
-    public void formatFailedTest() {
-        assertThrows(NumberFormatException.class, () -> PhoneNumberValidator.format("41.93.58"));
-        assertThrows(NumberFormatException.class, () -> PhoneNumberValidator.format("41/93/58"));
-        assertThrows(NumberFormatException.class, () -> PhoneNumberValidator.format("41 93 58"));
-        assertThrows(NumberFormatException.class, () -> PhoneNumberValidator.format("41 9a 58"));
+    public void formatFailedTest() throws NumberParseException {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> PhoneNumberValidator.format("41 9a 58"));
+        assertTrue(exception.getMessage().contains("Le numéro doit être sur 10 caractères"));
     }
 
     @Test
@@ -104,4 +104,6 @@ public class PhoneNumberValidatorTest {
         exception = assertThrows(IllegalArgumentException.class, () -> PhoneNumberValidator.checkPhoneNumber("+687.93.58"));
         assertTrue(exception.getMessage().contains("Le numéro ne doit contenir que des chiffres."));
     }
+
+
 }
