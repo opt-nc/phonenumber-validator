@@ -60,7 +60,7 @@ dependencies {
 Plusieurs exemples sont disponibles dans la classe Main du projet.
 Pour lancer l'exemple:
 ```shell
-mvn exec:java
+mvn compile exec:java
 ```
 
 
