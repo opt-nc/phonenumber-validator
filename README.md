@@ -1,6 +1,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![🪶 Java CI with Maven](https://github.com/opt-nc/phonenumber-validator/actions/workflows/maven-build.yml/badge.svg?branch=main)](https://github.com/opt-nc/phonenumber-validator/actions/workflows/maven-build.yml)
 [![](https://jitpack.io/v/opt-nc/phonenumber-validator.svg)](https://jitpack.io/#opt-nc/phonenumber-validator)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # ❔ phonenumber-validator
 
