@@ -20,7 +20,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <mainClass>nc.opt.telecom.sdk.phonenumber.validator.Main</mainClass>
         <logback.version>1.2.11</logback.version>
-        <libphonenumber.version>8.12.51</libphonenumber.version>
+        <libphonenumber.version>8.12.52</libphonenumber.version>
         <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>
 
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
@@ -29,6 +29,7 @@
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
+        <checksum-maven-plugin.version>1.11</checksum-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -108,6 +109,32 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>net.nicoulaj.maven.plugins</groupId>
+                <artifactId>checksum-maven-plugin</artifactId>
+                <version>${checksum-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>files</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <algorithms>
+                        <algorithm>SHA-512</algorithm>
+                    </algorithms>
+                    <attachChecksums>true</attachChecksums>
+                    <fileSets>
+                        <fileSet>
+                            <directory>target</directory>
+                            <includes>
+                                <include>${project.artifactId}-${project.version}.jar</include>
+                            </includes>
+                        </fileSet>
+                    </fileSets>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
