@@ -1,0 +1,17 @@
+name: 🐦 Send a Tweet for the release !
+on:
+  release:
+    types: [published]
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ethomson/send-tweet-action@v1
+        with:
+          status: "📢 We've just released phonenumber-validator ${{ github.event.release.tag_name }}! 🚀 \n 
+          👉 ${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.event.release.tag_name }} \n
+          #NouvellCaledonie #opensource #openinnovation #techforgood"
+          consumer-key: ${{ secrets.TWITTER_OPTNC_DEV_API_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_OPTNC_DEV_API_KEY_SECRET }}
+          access-token: ${{ secrets.TWITTER_OPTNC_DEV_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_OPTNC_DEV_ACCESS_TOKEN_SECRET }}
