@@ -9,7 +9,6 @@
     <packaging>jar</packaging>
     <description>SDK java permettant de valider, qualifier un numéro de téléphone calédonien.</description>
     <inceptionYear>2022</inceptionYear>
-
     <name>phonenumber-validator</name>
     <url>https://github.com/opt-nc/phonenumber-validator</url>
 
@@ -30,6 +29,7 @@
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <checksum-maven-plugin.version>1.11</checksum-maven-plugin.version>
+        <jreleaser-maven-plugin.version>1.1.0</jreleaser-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -190,6 +190,30 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jreleaser</groupId>
+                <artifactId>jreleaser-maven-plugin</artifactId>
+                <version>${jreleaser-maven-plugin.version}</version>
+                <configuration>
+                    <jreleaser>
+                        <project>
+                            <license>GPL-3.0</license>
+                            <authors>OPT-NC/GLIA</authors>
+                            <copyright>2022 OPT-NC</copyright>
+                        </project>
+                        <announce>
+                            <twitter>
+                                <active>ALWAYS</active>
+                                <connectTimeout>20</connectTimeout>
+                                <readTimeout>60</readTimeout>
+                                <status>📢 We've just released phonenumber-validator ${project.version}! 🚀 \n
+                                    👉 ${url}/releases/tag/v${project.version} \n
+                                    #NouvellCaledonie #opensource #openinnovation #techforgood</status>
+                            </twitter>
+                        </announce>
+                    </jreleaser>
+                </configuration>
             </plugin>
         </plugins>
     </build>

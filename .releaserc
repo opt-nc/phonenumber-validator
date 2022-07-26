@@ -8,6 +8,7 @@
       {
         "prepareCmd": "mvn -B versions:set -DnewVersion=${nextRelease.version}",
         "publishCmd": "mvn -B install -DskipTests -DcreateChecksum=true && mkdir release && cp target/phonenumber-validator*.jar* release"
+        "successCmd": "mvn jreleaser:config jreleaser:announce"
       }
     ],
     [
