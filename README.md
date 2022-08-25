@@ -58,7 +58,7 @@ dependencies {
 
 ## ✍️ Exemples de code
 
-Plusieurs exemples sont disponibles dans la classe Main du projet.
+Plusieurs exemples sont disponibles dans la classe [Main](https://github.com/opt-nc/phonenumber-validator/blob/main/src/main/java/nc/opt/telecom/sdk/phonenumber/validator/Main.java) du projet.
 Pour lancer l'exemple:
 ```shell
 mvn compile exec:java
@@ -75,12 +75,14 @@ La méthode `format`, permet de convertir un numéro de téléphone sur 6 digits
 System.out.println("Type de numéro : " + PhoneNumberValidator.getPhoneType("+687514243").name());
 System.out.println("Mobile ? : " + (PhoneNumberValidator.isMobile("+687514243") ? "oui" : "non"));
 System.out.println("Fixe ? : " + (PhoneNumberValidator.isFixe("+687514243") ? "oui" : "non"));
+System.out.println("Special ? : " + (PhoneNumberValidator.isSpecial("+687514243") ? "oui" : "non"));
 ```
 
 ```shell
-Type de numéro : MOBILE
+Type de numéro : Mobile
 Mobile ? : oui
 Fixe ? : non
+Special ? : non
 ```
 
 
@@ -118,7 +120,12 @@ Le numéro est-il un numéro de fixe
 jbang  phonenumber-validator@opt-nc/jbang-catalog -c is-fixe +687832583
 ```
 
-Le numéro est-il un numéro de télephone possible/valide
+Le numéro est-il un numéro spécial (urgences, services OPT-NC, SOS)
+```shell
+jbang  phonenumber-validator@opt-nc/jbang-catalog -c is-special +68715
+```
+
+Le numéro est-il un numéro de téléphone possible/valide
 
 ```shell
 jbang  phonenumber-validator@opt-nc/jbang-catalog -c is-valid +687832583
