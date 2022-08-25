@@ -118,7 +118,12 @@ Le numéro est-il un numéro de fixe
 jbang  phonenumber-validator@opt-nc/jbang-catalog -c is-fixe +687832583
 ```
 
-Le numéro est-il un numéro de télephone possible/valide
+Le numéro est-il un numéro spécial (urgences, services OPT-NC)
+```shell
+jbang  phonenumber-validator@opt-nc/jbang-catalog -c is-special +68715
+```
+
+Le numéro est-il un numéro de téléphone possible/valide
 
 ```shell
 jbang  phonenumber-validator@opt-nc/jbang-catalog -c is-valid +687832583

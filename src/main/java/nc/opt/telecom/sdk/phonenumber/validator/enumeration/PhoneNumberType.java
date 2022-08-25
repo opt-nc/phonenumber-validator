@@ -3,6 +3,9 @@ package nc.opt.telecom.sdk.phonenumber.validator.enumeration;
 public enum PhoneNumberType {
     FIXE ("Fixe"),
     MOBILE ("Mobile"),
+    URGENCES ("Urgences"),
+    SOS("SOS"),
+    SERVICES_OPT("Services OPT-NC"),
     INVALIDE("Invalide");
 
     private final String label;
@@ -18,6 +21,16 @@ public enum PhoneNumberType {
             }
         }
         return null;
+    }
+
+    public static String valueOf(PhoneNumberType type) {
+        String label = null;
+        for (PhoneNumberType e : values()) {
+            if (e.name().equals(type.name())) {
+                label = e.label;
+            }
+        }
+        return label;
     }
 
 }
