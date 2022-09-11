@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>nc.opt</groupId>
     <artifactId>phonenumber-validator</artifactId>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <packaging>jar</packaging>
     <description>SDK java permettant de valider, qualifier un numéro de téléphone calédonien.</description>
     <inceptionYear>2022</inceptionYear>
