@@ -7,7 +7,6 @@
 
 SDK Java permettant de valider, qualifier un numéro de téléphone calédonien.
 
-
 ## ⬇️ Import de la dépendance publique
 
 Cette dépendance est disponible publiquement via [Jitpack](https://jitpack.io/#opt-nc/phonenumber-validator).
@@ -152,3 +151,10 @@ jbang cache clear
 ```
 
 
+## 🙏 Remerciements
+
+Ce projet a débuté suite à une [idée](https://github.com/orgs/opt-nc/discussions/13) lancée par [@MarketingCollectif ](https://github.com/MarketingCollectif) sur le [forum de discussion de opt-nc](https://github.com/orgs/opt-nc/discussions).
+
+![image](https://user-images.githubusercontent.com/1823161/187096202-602060e3-2778-44a2-a487-b9b75e55ef3f.png)
+
+Merci à [@MarketingCollectif ](https://github.com/MarketingCollectif) de nous avoir soumis sa demande, qui nous l'espérons, profitera àu plus grand nombre.
