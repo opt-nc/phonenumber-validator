@@ -7,6 +7,11 @@
 
 SDK Java permettant de valider, qualifier un numéro de téléphone calédonien.
 
+# 👶 Découvrir
+
+Pour mieux comprendre comment est né ce projet, ce qu'il permet et les réalisations qu'il permet,
+allez sur la [série dédiée PhoneNumber Validator sur DEV.to](https://dev.to/adriens/series/19561).
+
 ## ⬇️ Import de la dépendance publique
 
 Cette dépendance est disponible publiquement via [Jitpack](https://jitpack.io/#opt-nc/phonenumber-validator).
