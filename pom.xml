@@ -18,7 +18,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <mainClass>nc.opt.telecom.sdk.phonenumber.validator.Main</mainClass>
-        <libphonenumber.version>8.13.3</libphonenumber.version>
+        <libphonenumber.version>8.13.4</libphonenumber.version>
         <junit-jupiter-api.version>5.9.2</junit-jupiter-api.version>
 
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
