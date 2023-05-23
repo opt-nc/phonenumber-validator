@@ -18,17 +18,17 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <mainClass>nc.opt.telecom.sdk.phonenumber.validator.Main</mainClass>
-        <libphonenumber.version>8.13.0</libphonenumber.version>
-        <junit-jupiter-api.version>5.9.1</junit-jupiter-api.version>
+        <libphonenumber.version>8.13.12</libphonenumber.version>
+        <junit-jupiter-api.version>5.9.3</junit-jupiter-api.version>
 
-        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-        <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
-        <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.1.0</maven-failsafe-plugin.version>
+        <jacoco-maven-plugin.version>0.8.10</jacoco-maven-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <checksum-maven-plugin.version>1.11</checksum-maven-plugin.version>
-        <jreleaser-maven-plugin.version>1.3.1</jreleaser-maven-plugin.version>
+        <jreleaser-maven-plugin.version>1.6.0</jreleaser-maven-plugin.version>
         <maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
     </properties>
 
