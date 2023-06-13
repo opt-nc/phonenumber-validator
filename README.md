@@ -3,6 +3,8 @@
 [![](https://jitpack.io/v/opt-nc/phonenumber-validator.svg)](https://jitpack.io/#opt-nc/phonenumber-validator)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+⚠️ Repository archivé : le sdk a été intégré à [api-phonenumber-validator](https://github.com/opt-nc/api-phonenumber-validator)
+
 # ❔ phonenumber-validator
 
 SDK Java permettant de valider, qualifier un numéro de téléphone calédonien.
